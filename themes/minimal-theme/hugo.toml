@@ -1,7 +1,0 @@
-languageCode = 'en-us'
-title = 'Custom minimal theme'
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"

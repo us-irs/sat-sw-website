@@ -1,4 +1,6 @@
-{{- with resources.Get "sass/main.scss" | toCSS $options | minify }}
+{{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+{{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
+{{- with $style }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else }}
