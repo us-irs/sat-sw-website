@@ -1,6 +1,6 @@
 baseURL = 'https://www.absatsw.irs-uni-stuttgart.de'
 languageCode = 'en-us'
-title = 'Institute for Space Systems Satellite Division Software Projects'
+title = 'IRS Satellite Division Software Projects'
 theme = "minimal-theme"
 relativeURLs = true
 
