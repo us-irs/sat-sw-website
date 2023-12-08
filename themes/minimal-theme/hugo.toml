@@ -1,16 +1,6 @@
 languageCode = 'en-us'
 title = 'Custom minimal theme'
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
-
-[[menus.main]]
-name = 'Contact'
-pageRef = '/posts'
-weight = 20
-
 [module]
   [module.hugoVersion]
     extended = false

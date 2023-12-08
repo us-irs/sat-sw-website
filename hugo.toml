@@ -2,3 +2,14 @@ baseURL = 'https://www.absatsw.irs-uni-stuttgart.de'
 languageCode = 'en-us'
 title = 'Institute for Space Systems Satellite Division Software Projects'
 theme = "minimal-theme"
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Contact'
+pageRef = 'contact'
+weight = 20
+
