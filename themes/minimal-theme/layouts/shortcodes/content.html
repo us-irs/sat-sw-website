@@ -1,0 +1,7 @@
+{{ $file := .Get 0 }}
+{{ $full_path := delimit (slice .Page.RelPermalink $file) "" }}
+{{ if strings.HasSuffix $file ".md" }}
+  {{ $full_path | readFile | markdownify }}
+{{ else if strings.HasSuffix $file ".html" }}
+  {{ $full_path | readFile | safeHTML }}
+{{ end }}

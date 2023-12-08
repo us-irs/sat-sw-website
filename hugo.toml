@@ -1,0 +1,38 @@
+baseURL = 'https://www.absatsw.irs-uni-stuttgart.de'
+languageCode = 'en-us'
+title = 'IRS Satellite Division Software Projects'
+theme = "minimal-theme"
+enableRobotsTXT = true
+
+[menu]
+[[menu.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+[[menu.main]]
+name = 'Contact'
+pageRef = 'contact'
+weight = 20
+[[menu.main]]
+name = 'IRS Website'
+url = 'https://www.irs.uni-stuttgart.de/'
+weight = 30
+[menu.main.params]
+blankTarget = true
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/bootstrap.bundle.min.js"
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "node_modules/bootstrap-icons/font/fonts"
+target = "static/css/fonts"
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'

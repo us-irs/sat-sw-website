@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <div class="container">
+    <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+    <h1 class="display-6">{{ .Content }}</h1>
+  </div>
+
+  <!-- Display all regular pages as beatiful boxes. Information like logos/headers/summary is
+  pulled from front matter-->
+  <div class="container py-3 text-center overflow-hidden">
+    <div class="row row-cols-2">
+      {{ range site.RegularPages }}
+        <a
+          href="{{ .RelPermalink }}"
+          class="col d-flex flex-column justify-content-center text-decoration-none"
+        >
+          <div
+            class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 px-2 py-3 h-100 border"
+          >
+            <span>
+              {{ $logo := .Resources.GetMatch "logo"}}
+              {{ with .Params }}
+                {{ if (and $logo .homeLogoCss) }} 
+                  <img
+                    src="{{ $logo.RelPermalink }}"
+                    class={{ .homeLogoCss }}
+                  />
+                  <br />
+                {{ else if .homeSummaryHeader }}
+                  <h2>{{ .homeSummaryHeader }}</h2>
+               {{ end }}
+              {{ end }}
+              {{ .Summary }}
+            </span>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

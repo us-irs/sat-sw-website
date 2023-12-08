@@ -1,0 +1,8 @@
+name = 'Theme name'
+license = 'MIT'
+licenselink = 'https://github.com/owner/repo/LICENSE'
+description = 'Theme description'
+
+# If the theme has a single author
+[author]
+  name = 'Robin Mueller'
