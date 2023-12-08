@@ -2,6 +2,7 @@ baseURL = 'https://www.absatsw.irs-uni-stuttgart.de'
 languageCode = 'en-us'
 title = 'Institute for Space Systems Satellite Division Software Projects'
 theme = "minimal-theme"
+relativeURLs = true
 
 [[menus.main]]
 name = 'Home'
@@ -13,3 +14,7 @@ name = 'Contact'
 pageRef = 'contact'
 weight = 20
 
+[module]
+  [[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"

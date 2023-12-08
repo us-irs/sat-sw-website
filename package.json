@@ -1,0 +1,10 @@
+{
+  "name": "sat-sw-website-hugo",
+  "version": "1.0.0",
+  "description": "University of Stuttgart ABSAT SW Website",
+  "main": "index.html",
+  "author": "Robin Mueller",
+  "dependencies": {
+    "bootstrap": "^5"
+  }
+}
