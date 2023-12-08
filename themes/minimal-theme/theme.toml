@@ -6,8 +6,3 @@ description = 'Theme description'
 # If the theme has a single author
 [author]
   name = 'Robin Mueller'
-
-[module]
-[[module.mounts]]
-  source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-  target = "assets/js/bootstrap.bundle.min.js"
