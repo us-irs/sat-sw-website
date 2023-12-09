@@ -1,13 +1,14 @@
 {{ define "main" }}
 <main aria-role="main">
   <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+
   <div class="container">
     <h1 class="display-6">
-      This is a collection of open-source software projects maintained by the
-      satellite division of the Institute of Space Systems at the University of
-      Stuttgart.
+      {{ .Content }}
     </h1>
+  </div>
 
+  <div class="container">
     <div class="container py-4 text-center overflow-hidden">
       <div class="row row-cols-2">
         <div class="col d-flex flex-column justify-content-center">
@@ -29,7 +30,7 @@
       </div>
     </div>
   </div>
-  {{ .Content }}
+
   <div>
     <!-- TODO: Somehow display the site summary as flexboxes? -->
     {{ range first 10 .Site.RegularPages }} {{ .Render "summary" }} {{ end }}
