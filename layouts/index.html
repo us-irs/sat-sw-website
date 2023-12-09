@@ -1,17 +1,18 @@
 {{ define "main" }}
 <main aria-role="main">
   <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-
   <div class="container">
-    <h1 class="display-6">
-      {{ .Content }}
-    </h1>
+    <h1 class="display-6">{{ .Content }}</h1>
   </div>
 
+  <!-- TODO: Find a way that the content of these boxes can be specified in front matter. -->
   <div class="container">
     <div class="container py-4 text-center overflow-hidden">
       <div class="row row-cols-2">
-        <div class="col d-flex flex-column justify-content-center">
+        <a
+          href="projects/fsfw"
+          class="col d-flex flex-column justify-content-center text-decoration-none"
+        >
           <div
             class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2"
           >
@@ -19,21 +20,19 @@
               Flight Software Framework (FSFW)
             </h2>
           </div>
-        </div>
-        <div class="col d-flex flex-column justify-content-center">
+        </a>
+        <a
+          href="projects/sat-rs"
+          class="col d-flex flex-column justify-content-center text-decoration-none"
+        >
           <div
             class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 h-100"
           >
             <h2 class="display-6 py-5 mx-2">sat-rs</h2>
           </div>
-        </div>
+        </a>
       </div>
     </div>
-  </div>
-
-  <div>
-    <!-- TODO: Somehow display the site summary as flexboxes? -->
-    {{ range first 10 .Site.RegularPages }} {{ .Render "summary" }} {{ end }}
   </div>
 </main>
 {{ end }}
