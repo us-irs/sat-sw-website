@@ -3,26 +3,23 @@ languageCode = 'en-us'
 title = 'IRS Satellite Division Software Projects'
 theme = "minimal-theme"
 
-[[menus.main]]
+[menu]
+[[menu.main]]
 name = 'Home'
 pageRef = '/'
 weight = 10
 
-[[menus.main]]
+[[menu.main]]
 name = 'Contact'
 pageRef = 'contact'
 weight = 20
 
-
-# [[menus.sidebar]]
-# name = 'FSFW'
-# pageRef = 'fsfw'
-#weight = 10
-
-# [[menus.sidebar]]
-# name = 'sat-rs'
-# pageRef = 'sat-rs'
-# weight = 20
+[[menu.main]]
+name = 'IRS Website'
+url = 'https://www.irs.uni-stuttgart.de/'
+weight = 30
+[menu.main.params]
+blankTarget = true
 
 [module]
 [[module.mounts]]

@@ -39,6 +39,9 @@ Renders a menu for the given menu ID.
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}
+    {{- with .Params.blankTarget }}
+      {{- $attrs = merge $attrs (dict "target" "_blank") }}
+    {{- end }}
     <li class="nav-item">
       <a class="nav-link" aria-current="page"
         {{- range $k, $v := $attrs }}
