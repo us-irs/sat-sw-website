@@ -6,11 +6,97 @@ draft = false
 
 <div class="container text-center">
   <div class="d-flex justify-content-center mx-auto w-75">
-    <p class="text-justify">
-      These packages contains generic implementations for various CCSDS
-      (Consultative Committee for Space Data Systems) and ECSS (European
-      Cooperation for Space Standardization) packet standards. Currently, these
-      packages are provided for Python and for Rust.
-    </p>
+    <p class="text-justify">{{% content "description.md" %}}</p>
+  </div>
+
+  <h1>Python</h1>
+  <div class="row row-cols-2 w-50 mx-auto my-4 gx-3">
+    <div class="col text-end">
+      <a
+        href="https://github.com/us-irs/spacepackets-py"
+        class="col d-flex flex-column justify-content-center text-decoration-none"
+        target="_blank"
+      >
+        <span class="content-button-bg">
+          <span class="content-button-text"
+            ><i class="bi bi-git"></i> Repository</span
+          >
+        </span>
+      </a>
+    </div>
+    <div class="col text-start">
+      <a
+        href="https://spacepackets.readthedocs.io/en/latest/"
+        class="col d-flex flex-column justify-content-center text-decoration-none"
+        target="_blank"
+      >
+        <span class="content-button-bg">
+          <span class="content-button-text"
+            ><i class="bi bi-file-text"></i> Documentation</span
+          >
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <h1>Rust</h1>
+  <h2><i class="bi bi-git"></i> Repository</h2>
+  <div class="row row-cols-2 w-50 mx-auto my-4 gx-3">
+    <div class="col text-end">
+      <a
+        href="https://egit.irs.uni-stuttgart.de/rust/spacepackets"
+        class="col d-flex flex-column justify-content-center text-decoration-none"
+        target="_blank"
+      >
+        <span class="content-button-bg">
+          <span class="content-button-text"
+            ><i class="bi bi-git"></i> Gitea</span
+          >
+        </span>
+      </a>
+    </div>
+    <div class="col text-start">
+      <a
+        href="https://github.com/us-irs/spacepackets-rs"
+        class="col d-flex flex-column justify-content-center text-decoration-none"
+        target="_blank"
+      >
+        <span class="content-button-bg">
+          <span class="content-button-text"
+            ><i class="bi bi-file-text"></i> Github (Mirror)</span
+          >
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <h2><i class="bi bi-file-text"></i> Documentation</h2>
+  <div class="row w-25 mx-auto pb-3 my-3">
+    <div class="col">
+      <a
+        href="https://docs.rs/spacepackets"
+        class="col d-flex flex-column justify-content-center text-decoration-none"
+        target="_blank"
+      >
+        <span class="content-button-bg">
+          <span class="content-button-text">docs.rs</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <h2><i class="bi bi-check"></i> Coverage</h2>
+  <div class="row w-25 mx-auto pb-3 my-3">
+    <div class="col">
+      <a
+        href="projects/spacepackets-rs/coverage/latest"
+        class="col d-flex flex-column justify-content-center text-decoration-none"
+        target="_blank"
+      >
+        <span class="content-button-bg">
+          <span class="content-button-text">Latest</span>
+        </span>
+      </a>
+    </div>
   </div>
 </div>
