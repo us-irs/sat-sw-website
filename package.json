@@ -5,6 +5,7 @@
   "main": "index.html",
   "author": "Robin Mueller",
   "dependencies": {
-    "bootstrap": "^5"
+    "bootstrap": "^5",
+    "bootstrap-icons": "^1"
   }
 }

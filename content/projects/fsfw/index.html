@@ -5,77 +5,52 @@ draft = false
 +++
 
 <div class="container text-center">
-  <img src="FSFW_Logo_V3_bw.png" class="img-fluid mx-auto my-3" />
+  <img src="FSFW_Logo_V3_bw.png" class="img-fluid mx-auto my-4" />
   <div class="d-flex justify-content-center mx-auto w-75">
     <p class="text-justify">
-      The Flight Software Framework is a C++ Object Oriented Framework for
-      unmanned, automated systems like Satellites. It has flight heritage
-      through the 2 missions
-      <a
-        href="https://www.irs.uni-stuttgart.de/en/research/satellitetechnology-and-instruments/smallsatelliteprogram/flying-laptop/"
-        target="_blank"
-        >FLP</a
-      >
-      and
-      <a
-        href="https://www.irs.uni-stuttgart.de/en/research/satellitetechnology-and-instruments/smallsatelliteprogram/EIVE/"
-        target="_blank"
-        >EIVE</a
-      >.
+      {{% content "description.md" %}}
     </p>
   </div>
 
-  <h1>Documentation and Coverage</h1>
-  <div class="row">
+  <h2><i class="bi bi-file-text"></i> Documentation and Coverage</h2>
+  <div class="row row-cols-2 w-25 mx-auto pb-3">
     <div class="col">
-      <span
-        class="text-bg-primary rounded d-flex flex-column flex-wrap justify-content-center p-3 my-2 w-75 mx-auto"
+      <button
+        type="button"
+        class="fsfw-doc-button"
+        href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/development/"
       >
-        <a
-          href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/development/"
-          class="text-decoration-none text-light"
-          target="_blank"
-          >DEVELOP</a
-        >
-      </span>
+        DEVELOP
+      </button>
     </div>
     <div class="col">
-      <span
-        class="text-bg-primary rounded d-flex flex-column flex-wrap justify-content-center p-3 my-2 w-75 mx-auto"
+      <button
+        type="button"
+        class="fsfw-doc-button"
+        href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/master/"
       >
-        <a
-          href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/master/"
-          class="text-decoration-none text-light"
-          target="_blank"
-          >MASTER</a
-        >
-      </span>
+        MASTER 
+      </button>
     </div>
   </div>
-  <div class="row pb-2">
+  <h2>Repository</h2>
+  <h2>Test Coverage</h2>
+  <div class="row row-cols-2 w-25 mx-auto pb-3">
     <div class="col">
-      <span
-        class="text-bg-primary rounded d-flex flex-column flex-wrap justify-content-center p-3 my-2 w-75 mx-auto"
+      <a
+        href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/development/"
+        class="fsfw-doc-button"
+        target="_blank"
+        >DEVELOP</a
       >
-        <a
-          href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/development/"
-          class="text-decoration-none text-light"
-          target="_blank"
-          >&#8594; COVERAGE</a
-        >
-      </span>
     </div>
     <div class="col">
-      <span
-        class="text-bg-primary rounded d-flex flex-column flex-wrap justify-content-center p-3 my-2 w-75 mx-auto"
+      <a
+        href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/master/"
+        class="fsfw-doc-button"
+        target="_blank"
+        >MASTER</a
       >
-        <a
-          href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/master/"
-          class="text-decoration-none text-light"
-          target="_blank"
-          >&#8594; COVERAGE</a
-        >
-      </span>
     </div>
   </div>
 </div>

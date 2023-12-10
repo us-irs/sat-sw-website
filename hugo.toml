@@ -8,12 +8,10 @@ theme = "minimal-theme"
 name = 'Home'
 pageRef = '/'
 weight = 10
-
 [[menu.main]]
 name = 'Contact'
 pageRef = 'contact'
 weight = 20
-
 [[menu.main]]
 name = 'IRS Website'
 url = 'https://www.irs.uni-stuttgart.de/'
@@ -23,12 +21,17 @@ blankTarget = true
 
 [module]
 [[module.mounts]]
-  source = "assets"
-  target = "assets"
+source = "assets"
+target = "assets"
 [[module.mounts]]
-  source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-  target = "assets/js/bootstrap.bundle.min.js"
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/bootstrap.bundle.min.js"
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "node_modules/bootstrap-icons/font/fonts"
+target = "static/css/fonts"
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
-
