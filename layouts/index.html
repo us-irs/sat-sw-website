@@ -13,13 +13,24 @@
           href="projects/fsfw"
           class="col d-flex flex-column justify-content-center text-decoration-none"
         >
-          <span
-            class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 px-2 py-3 border"
+          <div
+            class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 px-2 py-3 h-100 border"
           >
-            <h2 class="display-6">FSFW</h2>
-            A C/C++ framework to develop On-Board Software for remote systems
-            like satellites and rovers.
-          </span>
+            <span>
+              {{ with site.GetPage "projects/fsfw" }}
+                {{ with .Params }}
+                  {{ if (and .homeLogo .homeLogoCss) }} 
+                    <img
+                      src="/projects/fsfw/{{ .homeLogo }}"
+                      class={{ .homeLogoCss }}
+                    />
+                    <br />
+                 {{ end }}
+                {{ end }}
+                {{ .Params.homeSummary }}
+              {{ end }}
+            </span>
+          </div>
         </a>
 
         <a
@@ -29,9 +40,23 @@
           <div
             class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 py-3 px-2 h-100 border"
           >
-            <h2 class="display-6">sat-rs</h2>
-            A Rust framework to develop On-Board Software for remote systems
-            like satellites and rovers.
+            <span>
+              {{ with site.GetPage "projects/sat-rs" }}
+                {{ with .Params }}
+                  {{ if (and .homeLogo .homeLogoCss) }} 
+                    <img
+                      src="/projects/sat-rs/{{ .homeLogo }}"
+                      class={{ .homeLogoCss }}
+                    />
+                    <br />
+                 {{ end }}
+                {{ end }}
+              {{ end }}
+              <br />  
+              {{ with site.GetPage "projects/sat-rs" }}
+                {{ .Params.homeSummary }}
+              {{ end }}
+            </span>
           </div>
         </a>
 
@@ -41,9 +66,23 @@
         >
           <div
             class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 py-3 px-2 h-100 border"
-          >
-            <h2 class="display-6">spacepackets</h2>
-            A collection of CCSDS and ECSS packet standard implementations.
+          > 
+            {{ with site.GetPage "projects/spacepackets" }}
+              {{ with .Params }}
+                {{ if (and .homeLogo .homeLogoCss) }} 
+                  <img
+                    src="/projects/sat-rs/{{ .homeLogo }}"
+                    class={{ .homeLogoCss }}
+                  />
+                  <br />
+                {{ else if .homeSummaryHeader }}
+                  {{ .homeSummaryHeader | safeHTML }}
+               {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ with site.GetPage "projects/spacepackets" }}
+              {{ .Params.homeSummary }}
+            {{ end }}
           </div>
         </a>
       </div>
