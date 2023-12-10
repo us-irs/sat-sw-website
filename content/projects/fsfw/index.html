@@ -7,36 +7,46 @@ draft = false
 <div class="container text-center">
   <img src="FSFW_Logo_V3_bw.png" class="img-fluid mx-auto my-4" />
   <div class="d-flex justify-content-center mx-auto w-75">
-    <p class="text-justify">
-      {{% content "description.md" %}}
-    </p>
+    <p class="text-justify">{{% content "description.md" %}}</p>
   </div>
 
   <h2><i class="bi bi-file-text"></i> Documentation and Coverage</h2>
-  <div class="row row-cols-2 w-25 mx-auto pb-3">
-    <div class="col">
-      <button
+  <div class="row row-cols-2 w-50 mx-auto my-4 gx-3">
+    <div class="col text-end">
+      <a
         type="button"
         class="fsfw-doc-button"
         href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/development/"
       >
         DEVELOP
-      </button>
+      </a>
     </div>
-    <div class="col">
-      <button
+    <div class="col text-start">
+      <a
         type="button"
-        class="fsfw-doc-button"
+        class="fsfw-doc-button text-start"
         href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/master/"
       >
-        MASTER 
-      </button>
+        MASTER
+      </a>
     </div>
   </div>
+
   <h2>Repository</h2>
-  <h2>Test Coverage</h2>
-  <div class="row row-cols-2 w-25 mx-auto pb-3">
+  <div class="row w-25 mx-auto pb-3 my-3">
     <div class="col">
+      <a
+        href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/development/"
+        class="fsfw-doc-button"
+        target="_blank"
+        >gitea</a
+      >
+    </div>
+  </div>
+
+  <h2>Test Coverage</h2>
+  <div class="row row-cols-2 w-50 mx-auto my-4 gx-3">
+    <div class="col text-end">
       <a
         href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/development/"
         class="fsfw-doc-button"
@@ -44,7 +54,7 @@ draft = false
         >DEVELOP</a
       >
     </div>
-    <div class="col">
+    <div class="col text-start">
       <a
         href="https://documentation.irs.uni-stuttgart.de/projects/fsfw/coverage/master/"
         class="fsfw-doc-button"
