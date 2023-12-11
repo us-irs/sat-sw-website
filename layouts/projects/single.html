@@ -1,4 +1,6 @@
 {{ define "main" }}
-  {{ .Content }}
+  <div class="container">
+    {{ .Content }}
+  </div>
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
