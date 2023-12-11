@@ -4,6 +4,8 @@
     <h1 class="display-6">{{ .Content }}</h1>
   </div>
 
+  <!-- Display all regular pages as beatiful boxes. Information like logos/headers/summary is
+  pulled from front matter-->
   <div class="container py-3 text-center overflow-hidden">
     <div class="row row-cols-2">
       {{ range site.RegularPages }}
