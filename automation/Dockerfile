@@ -8,7 +8,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get --yes install rsync openssh-client
 
 # Install hugo v0.121.1
-RUN curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_0.121.1_darwin-universal.tar.gz | tar -xz --directory /usr/local/bin
+RUN curl -sSL https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_0.121.1_Linux-64bit.tar.gz | tar -xz --directory /usr/local/bin
 
 #ssh needs a valid user to work
 RUN adduser --uid 114 jenkins
