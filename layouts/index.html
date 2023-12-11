@@ -4,85 +4,34 @@
     <h1 class="display-6">{{ .Content }}</h1>
   </div>
 
-  <!-- TODO: Find a way that the content of these boxes can be specified in front matter. -->
   <div class="container py-3 text-center overflow-hidden">
     <div class="row row-cols-2">
-      <a
-        href="projects/fsfw"
-        class="col d-flex flex-column justify-content-center text-decoration-none"
-      >
-        <div
-          class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 px-2 py-3 h-100 border"
+      {{ range site.RegularPages }}
+        <a
+          href="{{ .RelPermalink }}"
+          class="col d-flex flex-column justify-content-center text-decoration-none"
         >
-          <span>
-            {{ with site.GetPage "projects/fsfw" }}
+          <div
+            class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 px-2 py-3 h-100 border"
+          >
+            <span>
+              {{ $logo := .Resources.GetMatch "logo"}}
               {{ with .Params }}
-                {{ if (and .homeLogo .homeLogoCss) }} 
+                {{ if (and $logo .homeLogoCss) }} 
                   <img
-                    src="/projects/fsfw/{{ .homeLogo }}"
+                    src="{{ $logo.RelPermalink }}"
                     class={{ .homeLogoCss }}
                   />
                   <br />
+                {{ else if .homeSummaryHeader }}
+                  <h2>{{ .homeSummaryHeader }}</h2>
                {{ end }}
               {{ end }}
-              {{ .Params.homeSummary }}
-            {{ end }}
-          </span>
-        </div>
-      </a>
-
-      <a
-        href="projects/sat-rs"
-        class="col d-flex flex-column justify-content-center text-decoration-none"
-      >
-        <div
-          class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 py-3 px-2 h-100 border"
-        >
-          <span>
-            {{ with site.GetPage "projects/sat-rs" }}
-              {{ with .Params }}
-                {{ if (and .homeLogo .homeLogoCss) }} 
-                  <img
-                    src="/projects/sat-rs/{{ .homeLogo }}"
-                    class={{ .homeLogoCss }}
-                  />
-                  <br />
-               {{ end }}
-              {{ end }}
-            {{ end }}
-            <br />  
-            {{ with site.GetPage "projects/sat-rs" }}
-              {{ .Params.homeSummary }}
-            {{ end }}
-          </span>
-        </div>
-      </a>
-
-      <a
-        href="projects/spacepackets"
-        class="col d-flex flex-column justify-content-center text-decoration-none"
-      >
-        <div
-          class="bg-body-tertiary rounded d-flex flex-column flex-wrap justify-content-center my-2 py-3 px-2 h-100 border"
-        > 
-          {{ with site.GetPage "projects/spacepackets" }}
-            {{ with .Params }}
-              {{ if (and .homeLogo .homeLogoCss) }} 
-                <img
-                  src="/projects/sat-rs/{{ .homeLogo }}"
-                  class={{ .homeLogoCss }}
-                />
-                <br />
-              {{ else if .homeSummaryHeader }}
-                {{ .homeSummaryHeader | safeHTML }}
-             {{ end }}
-            {{ end }}
-          {{ end }}
-          {{ with site.GetPage "projects/spacepackets" }}
-            {{ .Params.homeSummary }}
-          {{ end }}
-        </div>
-      </a>
+              {{ .Summary }}
+            </span>
+          </div>
+        </a>
+      {{ end }}
     </div>
   </div>
 {{ end }}
