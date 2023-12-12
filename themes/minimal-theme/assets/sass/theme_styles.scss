@@ -1,1 +1,5 @@
-
+// Add responsive to width utility
+$utilities: map-merge(
+  $utilities,
+  ("width": map-merge(map-get($utilities, "width"), (responsive: true)))
+);
