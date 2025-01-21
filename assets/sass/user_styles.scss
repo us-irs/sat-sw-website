@@ -1,9 +1,16 @@
+// DO NOT USE THIS! It is not allowed to use the Univers font on unlicensed websites.
 @font-face {
   font-family: "univers";
   src: url("/fonts/univers/UniversforUniS55Rm-Regular.ttf") format("truetype");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rubik:wght@300&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rubik:wght@300&display=swap");
+
+// Someone had legal issues with a non-vendored version of rubik, so we do it the safe way.
+@font-face {
+  font-family: "rubik";
+  src: url("/fonts/rubik/Rubik-Regular.ttf") format("truetype");
+}
 
 html {
   font-size: 20px;
