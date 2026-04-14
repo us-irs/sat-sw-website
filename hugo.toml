@@ -11,7 +11,7 @@ pageRef = '/'
 weight = 10
 [[menu.main]]
 name = 'Contact'
-pageRef = 'contact'
+url = 'https://www.irs.uni-stuttgart.de/institut/team/Mohr-00015/'
 weight = 20
 [[menu.main]]
 name = 'IRS Website'
